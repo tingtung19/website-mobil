@@ -1,4 +1,4 @@
 <?php
-echo "Halo ini saya";
+echo "Halo ini saya edit pertama kali";
 
 ?>
