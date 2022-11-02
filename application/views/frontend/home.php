@@ -7,7 +7,7 @@
       <div class="row">
         <div class="col-md-5 col-md-push-7">
           <div class="banner_content">
-            <h1 style="color: black">Cari Mobil untuk kenyamanan anda.</h1>
+            <h1 style="color: black">Cari Mobil untuk Kenyamanan dan Kebutuhan anda.</h1>
             <p>Kami Punya beberapa pilihan untuk anda. </p>
             <a href="<?php echo base_url('car_listing');?>" class="btn">Selengkapnya <span class="angle_arrow"><i class="fa fa-angle-right" aria-hidden="true"></i></span></a> </div>
         </div>
