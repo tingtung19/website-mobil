@@ -20,6 +20,7 @@
         
    
             <li><a href="<?php echo base_url('simulasi') ;?>">Simulasi</a></li>
+            <li><a href="<?php echo base_url('spk') ;?>">Rekomendasi (SPK)</a></li>
           <li><a href="<?php echo base_url('contact_us') ;?>">Hubungi Kami</a></li>
                
           </ul>
