@@ -3,9 +3,11 @@
 application/cache/*
 !application/cache/index.html
 
-application/config
+application/config/
 application/logs/*
 !application/logs/index.html
+
+application/views/frontend/home.php
 
 !application/*/.htaccess
 
