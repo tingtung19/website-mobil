@@ -22,7 +22,7 @@
 <section class="about_us section-padding">
   <div class="container">
     <div class="section-header ">
-      <h2 class="text-center"> Tentang <?php   echo htmlentities($data_profil['nama_profil']); ?></h2>
+      <h2 class="text-center"> Tentang <?php   echo htmlentities($data_profil['nama_profil']); ?> ?</h2>
       <p style="text-align: justify;"><?php  echo $data_profil['deskripsi_profil']; ?> </p>
     </div>
   </div>
