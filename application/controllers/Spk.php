@@ -14,15 +14,21 @@ class Spk extends CI_Controller{
 
   function form_spk(){
     if (isset($_POST['submit'])) {
+
+      $hasil_spk = $this->front_model->get_mobil_where(6)->row_array();
      
       $data = array(
               'data_profil' => $this->front_model->lihat('t_profil')->row_array(),
               'data_kriteria' => $this->front_model->lihat('t_kriteria')->result_array(),
+              'nama' => $_POST['nama'],
+              'no_hp' => $_POST['no_hp'],
+              'alamat' => $_POST['alamat'],
               'harga' => $_POST['harga'],
               'dp' => $_POST['dp'],
               'bunga' => $_POST['bunga'], 
               'bulan' => $_POST['bulan'],
-              'content' => 'hasil_simulasi', 
+              'hasil_spk' => $hasil_spk,
+              'content' => 'form_spk', 
 
             );
     }else{

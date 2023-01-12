@@ -49,12 +49,12 @@ function tampilBunga() {
           <div class="widget_heading">
             <h5><i class="fa fa-envelope" aria-hidden="true"></i>Isi Form dibawah ini</h5>
           </div>
-          <form class="form-horizontal">
+          <form class="form-horizontal" method="POST" action="#">
 
           <div class="form-group">
             <label for="inputEmail3" class="col-sm-2 control-label">Nama Lengkap</label>
             <div class="col-sm-10">
-              <input type="text" class="form-control" name="nama" id="inputEmail3" placeholder="Nama">
+              <input type="text" class="form-control" name="nama" id="inputEmail3" value="" placeholder="Nama">
             </div>
           </div>
 
@@ -88,11 +88,7 @@ function tampilBunga() {
                   foreach ($data_detail as $dd) {
                       echo "<option value='$dd[id_detail_kriteria]'>$dd[nama_detail_kriteria]</option>";
                   }
-                ?>
-                
-                    
-               
-
+                ?>  
                 </select>
               </div>
             </div>
@@ -111,8 +107,31 @@ function tampilBunga() {
             
           </form>
           
-          <div class="main_features">          
-     
+          <div class="main_features">  
+            <?php
+                    
+            if(isset($hasil_spk)) {
+
+            ?>
+            <div class="product-listing-m gray-bg">
+              <div class="product-listing-img"><img src="<?php echo base_url().'image/mobil/'.htmlentities($hasil_spk['gambar']);?>" class="img-responsive" alt="Image" /> </a> 
+              </div>
+              <div class="product-listing-content">
+                <h5><a href="<?php echo base_url('home/detail_mobil/').htmlentities($hasil_spk['id_mobil']);?>"> <?php echo htmlentities($hasil_spk['nama_mobil']);?></a></h5>
+                <p>#<?php echo htmlentities($hasil_spk['nama_kategori']);?></p>
+                <p class="list-price">Mulai <?php echo htmlentities(format_rupiah($hasil_spk['harga']));?> </p>
+                <ul>
+                  <!-- <li><i class="fa fa-user" aria-hidden="true"></i><?php echo htmlentities($hasil_spk['seating']);?> Seats</li>
+                  <li><i class="fa fa-calendar" aria-hidden="true"></i><?php echo htmlentities($hasil_spk['tahun']);?> </li>
+                  <li><i class="fa fa-car" aria-hidden="true"></i><?php echo htmlentities($hasil_spk['bb']);?></li> -->
+                </ul>
+                <a href="<?php echo base_url('home/detail_mobil/').htmlentities($hasil_spk['id_mobil']);?>" class="btn">Lihat Detail <span class="angle_arrow"><i class="fa fa-angle-right" aria-hidden="true"></i></span></a>
+              </div>
+            </div>
+            <?php 
+            } 
+            ?>
+          </div>
         </div>
       </div>
 
