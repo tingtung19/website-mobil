@@ -106,7 +106,7 @@ function tampilBunga() {
           
             
             <div class="form-group" align="center">
-                <button  class="form-control btn btn-primary" align="center" type="submit" name="submit">fdd  Proses Rekomendasi</button><br>
+                <button  class="form-control btn btn-primary" align="center" type="submit" name="submit">Proses Rekomendasi</button><br>
               </div> 
             
           </form>
